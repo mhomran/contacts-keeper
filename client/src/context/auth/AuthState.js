@@ -12,7 +12,6 @@ import {
   LOGOUT,
   CLEAR_ERRORS,
 } from "../types";
-import { sanitize } from "express-validator";
 
 const AuthState = (props) => {
   const initalState = {
