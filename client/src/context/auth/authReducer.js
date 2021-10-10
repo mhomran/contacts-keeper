@@ -30,9 +30,17 @@ export default (state, action) => {
         error: action.payload,
       };
     case CLEAR_ERRORS:
+    case AUTH_ERROR:
       return {
         ...state,
         error: "",
+      };
+    case USER_LOADED:
+      return {
+        ...state,
+        isAuthenticated: true,
+        loading: false,
+        user: action.payload,
       };
     default:
       return state;
